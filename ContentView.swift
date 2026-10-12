@@ -4,57 +4,98 @@
 //
 //  Created by Christian Schwind on 13/1/26.
 //
+//  12.10.2026
+//  Based on a reply to my post in the Apple forum, I added 'width' and 'WIDTH'.
+//
 
 import SwiftUI
 import AVFoundation
 import Foundation
- 
+
 let synthesizer: AVSpeechSynthesizer = AVSpeechSynthesizer()
- 
+
 struct ContentView: View {
     var body: some View {
         VStack {
-            Button {
-                utter("mon")
-            } label: {
-                Text("mon")
+            HStack {
+                Button {
+                    utter("mon")
+                } label: {
+                    Text("mon")
+                }
+                .buttonStyle(.borderedProminent)
+                
+                Button {
+                    utter("tue")
+                } label: {
+                    Text("tue")
+                }
+                .buttonStyle(.borderedProminent)
+                
+                Button {
+                    utter("thu")
+                } label: {
+                    Text("thu")
+                }
+                .buttonStyle(.borderedProminent)
+                
+                Button {
+                    utter("wed")
+                } label: {
+                    Text("wed")
+                }
+                .buttonStyle(.borderedProminent)
+                
             }
-            .buttonStyle(.borderedProminent)
             
-            Button {
-                utter("tue")
-            } label: {
-                Text("tue")
+            HStack {
+                Button {
+                    utter("feb")
+                } label: {
+                    Text("feb")
+                }
+                .buttonStyle(.borderedProminent)
+                
+                Button {
+                    utter("feb", lang: "de-DE")
+                } label: {
+                    Text("feb DE")
+                }
+                .buttonStyle(.borderedProminent)
             }
-            .buttonStyle(.borderedProminent)
             
-            Button {
-                utter("thu")
-            } label: {
-                Text("thu")
+            HStack {
+                Button {
+                    utter("width")
+                } label: {
+                    Text("width")
+                }
+                .buttonStyle(.borderedProminent)
+                
+                Button {
+                    utter("WIDTH")
+                } label: {
+                    Text("WIDTH")
+                }
+                .buttonStyle(.borderedProminent)
             }
-            .buttonStyle(.borderedProminent)
             
-            Button {
-                utter("feb")
-            } label: {
-                Text("feb")
+            HStack {
+                Button {
+                    utter("monday")
+                } label: {
+                    Text("monday")
+                }
+                .buttonStyle(.borderedProminent)
+                
+                Button {
+                    utter("MONDAY")
+                } label: {
+                    Text("MONDAY")
+                }
+                .buttonStyle(.borderedProminent)
             }
-            .buttonStyle(.borderedProminent)
             
-            Button {
-                utter("feb", lang: "de-DE")
-            } label: {
-                Text("feb DE")
-            }
-            .buttonStyle(.borderedProminent)
-            
-            Button {
-                utter("wed")
-            } label: {
-                Text("wed")
-            }
-            .buttonStyle(.borderedProminent)
         }
         .padding()
     }
@@ -66,9 +107,9 @@ struct ContentView: View {
         utterance.voice = voice
         synthesizer.speak(utterance)
     }
-   
+    
 }
- 
+
 #Preview {
     ContentView()
 }
