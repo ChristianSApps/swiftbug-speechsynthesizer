@@ -15,3 +15,9 @@ This bug report was submitted more than five years ago.
 So far, there has been neither a response nor a fix.
 
 [5 Year Old Bug Report](https://feedbackassistant.apple.com/feedback/9036694)
+
+I received a response; it confirmed that abbreviations for days of the week or months are not used
+as such, but are instead spoken out in full.
+
+I was advised to use SSML/IPA.
+Yes, but that didn’t work either.

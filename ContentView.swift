@@ -12,7 +12,7 @@ import SwiftUI
 import AVFoundation
 import Foundation
 
-let synthesizer: AVSpeechSynthesizer = AVSpeechSynthesizer()
+fileprivate let synthesizer: AVSpeechSynthesizer = AVSpeechSynthesizer()
 
 struct ContentView: View {
     var body: some View {
